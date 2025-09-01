@@ -2,7 +2,7 @@ type ClassValue = string | Record<string, boolean> | undefined | null;
 
 export const classNames = (...args: ClassValue[]): string => {
     return args
-        .flatMap((arg) => {
+        .map((arg) => {
             if (!arg) return [];
             if (typeof arg === 'string') return [arg];
             if (typeof arg === 'object') {
