@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import styles from './HomePage.module.scss';
 import { useTheme } from '@/shared/config';
-import { Button, Input } from '@/shared/ui';
+import { AppIcon, Button, Input } from '@/shared/ui';
 import { BiSearch } from 'react-icons/bi';
 
 function HomePage() {
@@ -9,7 +9,7 @@ function HomePage() {
     return (
         <>
             <h1 className={styles.title}>Home</h1>
-            <Input placeholder='Search...' Icon={<BiSearch />} />
+            <Input placeholder='Search...' Icon={<AppIcon Icon={BiSearch} theme='background' />} />
             <Button theme='outline' onClick={toggleTheme}>
                 Theme
             </Button>

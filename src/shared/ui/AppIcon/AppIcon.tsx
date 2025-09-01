@@ -1,0 +1,34 @@
+import type { FunctionComponent, SVGProps } from 'react';
+import styles from './Appicon.module.scss';
+import { cn } from '@/shared/lib';
+
+type AppIconTheme = 'clean' | 'background';
+
+interface AppIconProps {
+    Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+    theme?: AppIconTheme;
+    size?: number;
+    className?: string;
+    filled?: boolean;
+}
+
+const AppIcon = (props: AppIconProps) => {
+    const { Icon, className, theme = 'clean', size = 24, filled = false } = props;
+
+    const AppIcon = (
+        <Icon
+            width={size}
+            height={size}
+            className={cn(styles.icon, className, {
+                [styles.filled]: filled,
+            })}
+        />
+    );
+
+    if (theme === 'background') {
+        return <div className={styles.wrapper}>{AppIcon}</div>;
+    }
+    return AppIcon;
+};
+
+export default AppIcon;
