@@ -1,4 +1,4 @@
-import { Button, Spinner } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 import styles from './HomePage.module.scss';
 import { Footer, Header } from '@/widgets';
 import { useEffect, useState } from 'react';
