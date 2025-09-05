@@ -1,7 +1,7 @@
 import { LOCAL_STORAGE_USER_KEY } from '@/shared/config';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { userActions } from '@/entities/user';
+import { userActions } from '@/entities';
 
 type LoginArgs = {
     email?: string;
