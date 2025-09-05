@@ -1,4 +1,4 @@
-import { Button } from '@/shared/ui';
+import { Tabs } from '@/shared/ui';
 import styles from './HomePage.module.scss';
 import { Footer, Header } from '@/widgets';
 import { useEffect, useState } from 'react';
@@ -14,7 +14,14 @@ function HomePage() {
         <div className={styles.pageWrapper}>
             <Header />
             <main className={styles.content}>
-                <Button onClick={() => setError(true)}>Click</Button>
+                {/* <Tabs defaultValue='1'>
+                    <Tabs.List>
+                        <Tabs.Trigger value='1'>1</Tabs.Trigger>
+                        <Tabs.Trigger value='2'>2</Tabs.Trigger>
+                    </Tabs.List>
+                    <Tabs.Content value='1'>1</Tabs.Content>
+                    <Tabs.Content value='2'>2</Tabs.Content>
+                </Tabs> */}
             </main>
             <Footer />
         </div>
