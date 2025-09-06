@@ -24,6 +24,9 @@ export const loginSlice = createSlice({
         setPhone: (state, action: PayloadAction<string>) => {
             state.phone = action.payload;
         },
+        setPassword: (state, action: PayloadAction<string>) => {
+            state.password = action.payload;
+        },
         setMethod: (state, action: PayloadAction<string>) => {
             state.method = action.payload;
         },

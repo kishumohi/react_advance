@@ -50,9 +50,9 @@ const Input = (props: InputProps) => {
                 })}
             />
             {type === 'password' && (
-                <Button theme='ghost' type='button' className={styles.toggleVisibility} onClick={toggleShowPassword}>
+                <div className={styles.toggleVisibility} onClick={toggleShowPassword}>
                     {showPassword ? 'Hide' : 'Show'}
-                </Button>
+                </div>
             )}
         </div>
     );
